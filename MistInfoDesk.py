@@ -39,7 +39,7 @@ name = input("What is your name?: ")
 print("\n")
 time.sleep(1)
 os.system('clear')
-name_banner = pyfiglet.figlet_format(name)
+name_banner = pyfiglet.figlet_format(name.split()[0])
 print(name_banner)
 time.sleep(1)
 os.system('clear')
@@ -83,19 +83,7 @@ print("Recorded registration number " + regNo)
 time.sleep(1)
 os.system('clear')
 
-# branch
-print(name_banner)
-print("\n")
-branch = input("Branch : ")
-print("\n")
-time.sleep(1)
-os.system('clear')
-print(name_banner)
-print("\n")
-print("Recorded branch " + branch)
-time.sleep(1)
-os.system('clear')
-
+# redirection page
 print(name_banner)
 print("\n")
 wait_message = "Redirecting to confirmation page..."
@@ -106,6 +94,9 @@ for l in wait_message:
 time.sleep(2)
 os.system('clear')
 
+# verification page
+verification_Banner = pyfiglet.figlet_format("Verify")
+print(verification_Banner)
 recorder_Info = "All your responses were recorded successfully.\n But they are not saved yet.\n Verify your entry by typing yes"
 for l in recorder_Info:
     sys.stdout.write(l)
@@ -119,10 +110,9 @@ print("Name: " + name + "\n")
 print("Email: " + email + "\n")
 print("Phone: +91" + phoneNo + "\n")
 print("Reg. No.: " + regNo + "\n")
-print("Branch: " + branch + "\n")
 print("\n")
 print("\n")
-confirmMess = input("Is this correct? Typy 'Yes' or 'No': ")
+confirmMess = input("Is this correct? Type 'Yes' or 'No': ")
 if confirmMess == "yes" or confirmMess == "Yes":
     os.system('clear')
     print("Good. Your messages were recorded. It's been saved on our system. See you in the recruitments.")
@@ -130,8 +120,7 @@ if confirmMess == "yes" or confirmMess == "Yes":
         "name": name,
         "email": email,
         "phone": phoneNo,
-        "regno": regNo,
-        "branch": branch
+        "regno": regNo
     }
     with open("./responses/" + regNo + ".json", "w") as json_file:
         json.dump(deskCode, json_file)
@@ -144,8 +133,4 @@ else:
 
 time.sleep(5)
 os.system('clear')
-reStart = input("Use mancomm code to quit, else type anything else:  ")
-if reStart == 3000:
-    print("The commmand ends now")
-else:
-    os.system('MistInfoDesk.py')
+os.system('MistInfoDesk.py')
