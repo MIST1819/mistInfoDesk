@@ -1,6 +1,5 @@
-/*
 * Copyright (c) 2019, MIST  All rights reserved.
-*/
+
 
 This python script has been made by var-greShader
 
@@ -19,8 +18,11 @@ You can do it typing the following in your terminal/command prompt
 
 pip install pyfiglet 
 
-And then voila! The program works
+And then voila! The program works. All the registration is saved as a new json file in the /responses directory
 
 
 You are free to modify the script up to your needs but need to give credit to 
 the author @var-greyShader and the organization @MIST1819 when you use this code elsewhere.
+
+
+
