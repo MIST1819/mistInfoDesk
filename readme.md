@@ -1,7 +1,7 @@
 * Copyright (c) 2019, MIST  All rights reserved.
 
 
-This python script has been made by var-greShader
+This python script has been made by var-greyShader
 
 To run this script, copy the repository files to a new folder and open the terminal/command prompt in the directory.
 
