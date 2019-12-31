@@ -7,17 +7,17 @@ import signal
 import random
 
 os.system('clear')
- x = 0
- numCat = 0
+x = 0
+numCat = 0
 
- while x < 8000:
-     randNum = random.randint(0, 1)
-     numCat = str(numCat) + ' ' + str(randNum) + ' '
-     x = x + 1
+while x < 8000:
+    randNum = random.randint(0, 1)
+    numCat = str(numCat) + ' ' + str(randNum) + ' '
+    x = x + 1
 
  for l in numCat:
-     sys.stdout.write(l)
-     sys.stdout.flush()
+    sys.stdout.write(l)
+    sys.stdout.flush()
 
  time.sleep(2)
  os.system("clear")
